@@ -11,6 +11,7 @@
     <title>Title</title>
     <style>
         form {
+            
             width: 250px;
             border: 3px solid #f1f1f1;
             margin: 10px 15px;
