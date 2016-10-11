@@ -38,12 +38,11 @@ public class CompanyServiceImpl implements CompanyService {
     public void deleteCompany(int id){
         companyDao.deleteCompany(id);
     }
-/*
+
 
     public void addChild(int ParentId, String companyName, int companyEarnings) {
         companyDao.addChild(ParentId, companyName, companyEarnings);
     }
-*/
 
     public void addChild(int ParentId){
 

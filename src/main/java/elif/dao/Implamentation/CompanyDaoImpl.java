@@ -51,7 +51,7 @@ public class CompanyDaoImpl implements CompanyDao {
     @Transactional
     public void addChild(int ParentId,String companyName,int companyEarnings){
         Company company = new Company(companyName,companyEarnings,ParentId);
-        entityManager.createQuery("insert into company")
+        entityManager.persist(company);
     }
 
     @Transactional
