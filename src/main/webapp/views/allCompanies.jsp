@@ -35,32 +35,23 @@ background-color: #dddddd;
         <th>Company name</th>
         <th>Company earnings</th>
         <th>Company + child companies earnings</th>
-        <th>Видалення</th>
-        <th>Редагувати</th>
+        <th>Delete</th>
+        <th>Edit</th>
+        <th>Add child</th>
         </tr>
         <c:forEach var="a" items="${companies}">
-            <%--<c:if test="${a.parentId < 1}">--%>
+            <c:if test="${a.parentId < 1}">
             <tr>
             <th><a href="/findOneCompany/${a.id}">${a.name}</a></th>
-            <th>${a.earnings}</th>
+            <th>${a.earnings} $</th>
             <th>0</th>
-            <th><a href="/toCompanyDelete/${a.id}">Видалити</a></th>
-            <th><a href="/toCompanyEditPage/${a.id}">Редагувати</a> </th>
+            <th><a href="/toCompanyDelete/${a.id}">Delete</a></th>
+            <th><a href="/toCompanyEditPage/${a.id}">Edit</a> </th>
             <th><a href="/addChildPage/${a.id}">add child</a></th>
             </tr>
-            <%--</c:if>--%>
+            </c:if>
         </c:forEach>
     </table>
-    <%--<a href="/findOneCompany/${a.id}">
-        <a href="/toCompanyEditPage/${a.id}">Редагувати</a>
-        <a href="/toCompanyDelete/${a.id}">Видалити</a>
-        <a href="">add Child Compamy</a>
-        <div style="width: 200px;height: 200px;background-color: bisque">
-            <p>${a.name}</p>
-            <p>${a.earnings}</p>
-        </div>
-    </a>
---%>
 </body>
 </html>
 

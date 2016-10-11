@@ -30,21 +30,21 @@
     <title>Title</title>
 </head>
 <body>
-<p>${company.name}</p>
-<p>${company.earnings}</p>
-<h1 style="text-align: center">Children</h1>
+<h1 style="font-family:verdana; text-align: center">${company.name}</h1>
+<h3 style="text-align: center">Children</h3>
         <table>
             <tr>
                 <th>Company name</th>
                 <th>Company earnings</th>
                 <th>Company + child companies earnings</th>
-                <th>Видалення</th>
-                <th>Редагувати</th>
+                <th>Delete</th>
+                <th>Edit</th>
+                <th>Add child</th>
             </tr>
             <c:forEach var="c" items="${companies}">
                 <tr>
                     <th><a href="/findOneCompany/${c.id}">${c.name}</a></th>
-                    <th>${c.earnings}</th>
+                    <th><p>${c.earnings} $</p></th>
                     <th>0</th>
                     <th><a href="/toCompanyDelete/${c.id}">Видалити</a></th>
                     <th><a href="/toCompanyEditPage/${c.id}">Редагувати</a> </th>
