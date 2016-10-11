@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ElifTechTestAssignment:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="CompanyService-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ElifTechTestAssignment:war exploded" />
+    </root>
+  </artifact>
+</component>
